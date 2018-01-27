@@ -15,6 +15,7 @@ public class ECShowText : EventCommand {
         Debug.Log("Waiting for event command to end arbitrarily.");
         float endTime = Time.time + 5.0f;
         while(endTime > Time.time) yield return null;
+        GameState.instance.eventWait = false;
         Debug.Log("A second passed, you can continue.");
     }
 }
