@@ -21,7 +21,7 @@ public class Character2D : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(Input.mousePosition + " World Position" + Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            //Debug.Log(Input.mousePosition + " World Position" + Camera.main.ScreenToWorldPoint(Input.mousePosition));
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             
