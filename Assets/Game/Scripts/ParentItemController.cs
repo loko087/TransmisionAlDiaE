@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ParentItemController : MonoBehaviour {
-
+    public LayerMask clickableMask;
     public Button sampleButton;                         // sample button prefab
     protected List<ContextMenuItem> contextMenuItems;     // list of items in menu
 
@@ -28,7 +28,7 @@ public class ParentItemController : MonoBehaviour {
     // Update is called once per frame
     protected void Update()
     {
-		if (Input.touchSupported && Input.touchCount > 0)
+        if (Input.touchSupported && Input.touchCount > 0)
         {
             acumTime += Input.GetTouch(0).deltaTime;
 
@@ -43,7 +43,8 @@ public class ParentItemController : MonoBehaviour {
             }
         }
 
-        RaycastHit2D mouseHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        RaycastHit2D mouseHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), -Vector2.up,
+            Mathf.Infinity, clickableMask);
         if (mouseHit.collider != null)
         {
             if (mouseHit.collider.gameObject.CompareTag("Clickable"))
@@ -56,4 +57,10 @@ public class ParentItemController : MonoBehaviour {
             }
         }
 	}
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.up*1000);
+    }
 }

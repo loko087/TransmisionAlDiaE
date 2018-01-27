@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class MadrearVerController : ParentItemController {
 
+    [SerializeField]
+    public GameEvent gameEvent;
+
 	// Use this for initialization
 	void Start () {
         contextMenuItems = new List<ContextMenuItem>();
@@ -18,7 +21,9 @@ public class MadrearVerController : ParentItemController {
 
     void MadreateAction(Image contextPanel)
     {
-        Debug.Log("Madreado");
+        Debug.Log("madrear");
+        PlayerInteract playerInteract = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteract>();
+        playerInteract.SubscribeEvent(gameEvent);
         Destroy(contextPanel.gameObject);
     }
 

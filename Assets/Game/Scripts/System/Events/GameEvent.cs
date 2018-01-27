@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class GameEvent : MonoBehaviour {
     [SerializeField] private EventCommand[] commands;
+    [SerializeField] private bool activated;
     private int index;
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        if (!activated)
+        {
+            return;
+        }
         print("Collided with something.");
         PlayerInteract playerInteract = collision.gameObject.GetComponent<PlayerInteract>();
         if(playerInteract != null) {
