@@ -49,6 +49,7 @@ public class ContextMenuGenerator : MonoBehaviour {
         // here we are creating and displaying Context Menu
 
         Image panel = Instantiate(contentPanel, new Vector3(position.x, position.y, 0), Quaternion.identity) as Image;
+        panel.tag = "ContextPanel";
         panel.transform.SetParent(canvas.transform);
         panel.transform.SetAsLastSibling();
         panel.rectTransform.anchoredPosition = position;
@@ -61,6 +62,15 @@ public class ContextMenuGenerator : MonoBehaviour {
             buttonText.text = item.text;
             button.onClick.AddListener(delegate { tempReference.action(panel); });
             button.transform.SetParent(panel.transform);
+        }
+    }
+
+    public void DestroyContextMenu()
+    {
+        GameObject[] panels = GameObject.FindGameObjectsWithTag("ContextPanel");
+        foreach (GameObject panel in panels)
+        {
+            DestroyObject(panel);
         }
     }
 }

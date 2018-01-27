@@ -17,6 +17,7 @@ public class ParentItemController : MonoBehaviour {
 
     private void PopupMenu()
     {
+        ContextMenuGenerator.Instance.DestroyContextMenu();
         Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
         ContextMenuGenerator.Instance.CreateContextMenu(contextMenuItems, new Vector2(pos.x, pos.y));
     }
