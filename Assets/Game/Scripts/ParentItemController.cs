@@ -15,14 +15,6 @@ public class ParentItemController : MonoBehaviour {
         // initialization is responsibility of the child classes
     }
 
-    protected void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            PopupMenu();
-        }
-    }
-
     private void PopupMenu()
     {
         Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
@@ -33,7 +25,7 @@ public class ParentItemController : MonoBehaviour {
     private float acumTime = 0;
 
     // Update is called once per frame
-    protected void Update ()
+    protected void Update()
     {
 		if (Input.touchSupported && Input.touchCount > 0)
         {
@@ -47,6 +39,19 @@ public class ParentItemController : MonoBehaviour {
             if (Input.GetTouch(0).phase == TouchPhase.Ended)
             {
                 acumTime = 0;
+            }
+        }
+
+        RaycastHit2D mouseHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (mouseHit.collider != null)
+        {
+            if (mouseHit.collider.gameObject.CompareTag("Clickable"))
+            {
+               if (Input.GetMouseButtonDown(1))
+                {
+                    PopupMenu();
+                }
+               // Debug.Log("found");
             }
         }
 	}
