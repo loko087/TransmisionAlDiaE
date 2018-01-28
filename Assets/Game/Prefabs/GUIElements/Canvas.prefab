@@ -390,7 +390,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224218219029496408}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.4403406
+  m_Size: 0.44144675
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -557,7 +557,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd5568f17a571d4e98ea07d07d1771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 114367531530897670}
+  - {fileID: 0}
   player: {fileID: 0}
   carryingGameObject: {fileID: 0}
 --- !u!114 &114336868094432992
@@ -931,8 +933,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114122779479835350}
   m_HandleRect: {fileID: 224502224634693810}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.9999999
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

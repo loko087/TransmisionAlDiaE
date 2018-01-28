@@ -16,6 +16,10 @@ public class GameSwitch {
 
 public class GameState : MonoBehaviour {
     private static GameState m_Instance;
+
+    public delegate void activateInventoryObject(int id);
+    public static event activateInventoryObject activateInventoryObjectEvent;
+
     public static GameState Instance {
         get {
             if (m_Instance == null) m_Instance = FindObjectOfType<GameState>();
@@ -137,6 +141,14 @@ public class GameState : MonoBehaviour {
             if (sw.name.Equals(name)) {
                 sw.value = value;
             }
+        }
+    }
+
+    public  void SetInventoryItem(int id)
+    {
+        if (activateInventoryObjectEvent != null)
+        {
+            activateInventoryObjectEvent(id);
         }
     }
     public void ToggleSwitch(int id) {
