@@ -18,7 +18,7 @@ public class DialogManager : MonoBehaviour {
 
     public void StartDialog(Dialog dialog)
     {
-        Debug.Log("Starting converstion with " + dialog.name);
+        nameText.text = dialog.name;
 
         sentences.Clear();
 
@@ -26,6 +26,8 @@ public class DialogManager : MonoBehaviour {
         {
             sentences.Enqueue(sentence);
         }
+
+        DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
@@ -36,5 +38,6 @@ public class DialogManager : MonoBehaviour {
         }
 
         string sentence = sentences.Dequeue();
+        dialogText.text = sentence;
     }
 }

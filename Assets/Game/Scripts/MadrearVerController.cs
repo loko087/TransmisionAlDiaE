@@ -21,7 +21,6 @@ public class MadrearVerController : ParentItemController {
 
     void MadreateAction(Image contextPanel)
     {
-        Debug.Log("madrear");
         PlayerInteract playerInteract = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteract>();
         playerInteract.SubscribeEvent(gameEvent);
         Destroy(contextPanel.gameObject);
