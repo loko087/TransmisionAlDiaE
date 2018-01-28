@@ -10,6 +10,10 @@ public class InventoryItem : MonoBehaviour{
     public bool followMouse;
     public GameObject mouseobject;
     private Transform originalPosition;
+
+
+    public string targetObject;
+    public Inventory inventory;
 	// Use this for initialization
 	void Start () {
         originalPosition = transform;
@@ -23,6 +27,7 @@ public class InventoryItem : MonoBehaviour{
             followMouse = false;
             mouseobject.SetActive(false);
             this.GetComponent<Image>().CrossFadeAlpha(1.0f, 0.25f, false);
+            inventory.carryingGameObject = null;
         }
 
         if (followMouse)
@@ -36,6 +41,7 @@ public class InventoryItem : MonoBehaviour{
 
     public void FollowMouse()
     {
+        inventory.carryingGameObject =this;
         Debug.Log("soemthing");
         mouseobject.SetActive(true);
         this.GetComponent<Image>().CrossFadeAlpha(0.5f,0.25f,false);

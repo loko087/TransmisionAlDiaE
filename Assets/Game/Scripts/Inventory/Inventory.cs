@@ -8,9 +8,12 @@ public class Inventory : MonoBehaviour {
     public List<InventoryItem> items;
     public Character2D player;
 
+    public InventoryItem carryingGameObject;
+
+
 	// Use this for initialization
 	void Start () {
-		
+        carryingGameObject = null;
 	}
 	
 	// Update is called once per frame
@@ -18,6 +21,19 @@ public class Inventory : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E))
         {
             CloseInventory();
+        }
+
+        if(carryingGameObject != null && Input.GetMouseButtonDown(0))
+        {
+            RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if (ray.collider != null)
+            {
+                Debug.Log("Colliding with " + ray.collider.name);
+                if(ray.collider.gameObject.name == carryingGameObject.targetObject)
+                {
+                    Debug.Log("Drop it like it's hot");
+                }
+            }
         }
     }
 
