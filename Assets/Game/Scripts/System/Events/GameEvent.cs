@@ -27,9 +27,23 @@ public class GameEvent : MonoBehaviour {
     public bool AdvanceEvent() {
         if(index < commands.Length) {
             commands[index].Execute();
+            if(commands[index] is ECJumpToLabel) {
+                ECJumpToLabel jump = (ECJumpToLabel)commands[index];
+                if (jump.returnValue) index = JumpToLabel(jump);
+            }
             index++;
             return true;
         }
         return false;
+    }
+
+    public int JumpToLabel(ECJumpToLabel jump) {
+        for(int i = 0; i < commands.Length; i++) {
+            if(commands[i] is ECLabel) {
+                ECLabel label = (ECLabel) commands[i];
+                if (jump.CompareToLabel(label)) return i;
+            }
+        }
+        return index;
     }
 }

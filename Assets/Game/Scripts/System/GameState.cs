@@ -64,6 +64,21 @@ public class GameState : MonoBehaviour {
             }
         }
     }
+    public void MultVar(int id, int value) {
+        if (id > 0 && id < variables.Length) {
+            variables[id].value *= value;
+        }
+    }
+    public void DivVar(int id, int value) {
+        if (id > 0 && id < variables.Length) {
+            variables[id].value /= value;
+        }
+    }
+    public void ModVar(int id, int value) {
+        if (id > 0 && id < variables.Length) {
+            variables[id].value %= value;
+        }
+    }
 
     // Switch operations
     public bool GetSwitch(int id) {
