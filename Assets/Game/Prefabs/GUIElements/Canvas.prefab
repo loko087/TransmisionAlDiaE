@@ -49,6 +49,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1376266030234558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4081241395798870}
+  - component: {fileID: 114842580347235898}
+  m_Layer: 0
+  m_Name: DialogManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1404526834299942
 GameObject:
   m_ObjectHideFlags: 1
@@ -134,6 +150,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!4 &4081241395798870
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1376266030234558}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -517.9123, y: -307.7333, z: -0.8828125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224724144076549156}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114199291511577378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,7 +324,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114842580347235898}
         m_MethodName: DisplayNextSentence
         m_Mode: 1
         m_Arguments:
@@ -368,6 +397,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!114 &114842580347235898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1376266030234558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a53f2b5c9b2dd345988f320df592ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 114975225335612912}
+  dialogText: {fileID: 114336868094432992}
+  nextButton: {fileID: 114607908130338640}
+  speakerFace: {fileID: 114412508100542496}
+  textPanel: {fileID: 1523973761164496}
 --- !u!114 &114967197622106506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -512,7 +557,7 @@ RectTransform:
   - {fileID: 224031327969044258}
   - {fileID: 224939913560958400}
   m_Father: {fileID: 224724144076549156}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.26160976}
@@ -529,6 +574,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 4081241395798870}
   - {fileID: 224148248348169944}
   m_Father: {fileID: 0}
   m_RootOrder: 0

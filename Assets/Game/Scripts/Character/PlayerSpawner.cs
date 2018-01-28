@@ -15,4 +15,8 @@ public class PlayerSpawner : MonoBehaviour {
         }
         return Vector3.zero;
     }
+
+    private void OnDrawGizmos() {
+        Gizmos.DrawIcon(transform.position, "SpawnPoint");
+    }
 }
