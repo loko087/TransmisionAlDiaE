@@ -511,7 +511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12521788, y: 0.6937971}
   m_AnchorMax: {x: 0.21459404, y: 0.90800005}
-  m_AnchoredPosition: {x: 0.2000122, y: 0.39999962}
+  m_AnchoredPosition: {x: 0.2000122, y: 0.40000153}
   m_SizeDelta: {x: 0.5, y: -0.79999924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &909628904
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commands:
   - {fileID: 973182785}
-  activated: 1
+  activated: 0
 --- !u!61 &973182787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1755,7 +1755,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1931180187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.890675, y: -4.730898, z: -10.884622}
+  m_LocalPosition: {x: 7.0054846, y: -4.7086077, z: -10.884622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1696746044}
