@@ -49,7 +49,18 @@ public class DialogManager : MonoBehaviour {
         }
 
         string sentence = sentences.Dequeue();
-        dialogText.text = sentence;
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogText.text += letter;
+            yield return null;
+        }
     }
 
     private void EndOfDialog()
