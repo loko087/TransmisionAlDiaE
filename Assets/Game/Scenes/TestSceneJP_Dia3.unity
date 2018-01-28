@@ -617,6 +617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   player: {fileID: 940480847}
+  carryingGameObject: {fileID: 0}
 --- !u!1 &747351286
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +648,7 @@ MonoBehaviour:
   nameText: {fileID: 909628905}
   dialogText: {fileID: 1555955960}
   nextButton: {fileID: 1836389974}
+  speakerFace: {fileID: 0}
   textPanel: {fileID: 188981630}
 --- !u!4 &747351288
 Transform:
@@ -872,6 +874,11 @@ MonoBehaviour:
     value: 0
   - name: 
     value: 0
+  madreateSprite: {fileID: 21300002, guid: ad85601bf03484e4bb76159d1c016f8a, type: 3}
+  verSprite: {fileID: 21300004, guid: ad85601bf03484e4bb76159d1c016f8a, type: 3}
+  equipSprite: {fileID: 0}
+  useSprite: {fileID: 0}
+  dropSprite: {fileID: 0}
 --- !u!4 &836080297
 Transform:
   m_ObjectHideFlags: 0
@@ -1099,7 +1106,7 @@ GameObject:
   - component: {fileID: 973182784}
   - component: {fileID: 973182787}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Otto
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1134,7 +1141,8 @@ MonoBehaviour:
     m_Bits: 1
   sampleButton: {fileID: 114170755273491728, guid: a78fd7dcfcde7cb48bdce7b554a7aacb,
     type: 2}
-  gameEvent: {fileID: 973182786}
+  madrearEvent: {fileID: 973182786}
+  verEvent: {fileID: 973182786}
 --- !u!114 &973182785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1848,7 +1856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.20489697, y: 0}
   m_AnchorMax: {x: 0.26389706, y: 1}
-  m_AnchoredPosition: {x: -197.32571, y: -0.0000019073486}
+  m_AnchoredPosition: {x: -197.32571, y: 0}
   m_SizeDelta: {x: -2, y: -7.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331135679
@@ -1898,6 +1906,8 @@ MonoBehaviour:
   graphic: {fileID: 0}
   followMouse: 0
   mouseobject: {fileID: 1036391349}
+  targetObject: Otto
+  inventory: {fileID: 719149611}
 --- !u!114 &1331135682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2784,7 +2794,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1931180187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.086282, y: -149.38876, z: -10.884622}
+  m_LocalPosition: {x: 2.8, y: -149.37999, z: -10.884622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
