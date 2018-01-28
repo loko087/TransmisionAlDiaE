@@ -14,10 +14,17 @@ public class Inventory : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         carryingGameObject = null;
+        player = null;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(player == null)
+        {
+            GameObject.FindGameObjectWithTag("Player");
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             CloseInventory();

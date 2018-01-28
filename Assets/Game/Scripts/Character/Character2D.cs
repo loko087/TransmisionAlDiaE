@@ -21,6 +21,8 @@ public class Character2D : MonoBehaviour {
         targetPosition = this.transform.position;
        characterAnimator = GetComponent<Animator>();
         InventoryOpen = false;
+        Inventory = GameObject.FindGameObjectWithTag("Inventory");
+        Inventory.SetActive(false);
 	}
 	
 	// Update is called once per frame
