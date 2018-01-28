@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1cba2ff7b581f9a4fb90f16c58bb5b5a
-timeCreated: 1517084654
+timeCreated: 1517158302
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,15 @@ TextureImporter:
     21300016: characterArtworks_8
     21300018: characterArtworks_9
     21300020: characterArtworks_10
+    21300022: characterArtworks_11
+    21300024: characterArtworks_12
+    21300026: characterArtworks_13
+    21300028: characterArtworks_14
+    21300030: characterArtworks_15
+    21300032: characterArtworks_16
+    21300034: characterArtworks_17
+    21300036: characterArtworks_18
+    21300038: characterArtworks_19
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -108,8 +117,8 @@ TextureImporter:
         y: 716
         width: 169
         height: 356
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -122,8 +131,8 @@ TextureImporter:
         y: 715
         width: 143
         height: 347
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -136,8 +145,8 @@ TextureImporter:
         y: 795
         width: 107
         height: 123
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,8 +159,8 @@ TextureImporter:
         y: 796
         width: 115
         height: 120
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,8 +173,8 @@ TextureImporter:
         y: 718
         width: 241
         height: 315
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,8 +187,8 @@ TextureImporter:
         y: 723
         width: 242
         height: 348
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,8 +201,8 @@ TextureImporter:
         y: 735
         width: 286
         height: 358
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,8 +215,8 @@ TextureImporter:
         y: 739
         width: 122
         height: 224
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,8 +229,8 @@ TextureImporter:
         y: 741
         width: 227
         height: 271
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,8 +243,8 @@ TextureImporter:
         y: 537
         width: 74
         height: 89
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -248,8 +257,134 @@ TextureImporter:
         y: 543
         width: 105
         height: 85
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterArtworks_11
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 383
+        width: 233
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterArtworks_12
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 365
+        width: 242
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterArtworks_13
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 382
+        width: 221
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterArtworks_14
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 384
+        width: 239
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterArtworks_15
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 394
+        width: 212
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterArtworks_16
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 36
+        width: 250
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterArtworks_17
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 53
+        width: 175
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterArtworks_18
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 104
+        width: 252
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterArtworks_19
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 89
+        width: 190
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

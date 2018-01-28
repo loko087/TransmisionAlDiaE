@@ -35,6 +35,12 @@ public class GameState : MonoBehaviour {
     [SerializeField] private GameVariable[] variables;
     [SerializeField] private GameSwitch[] switches;
 
+    public Sprite madreateSprite;
+    public Sprite verSprite;
+    public Sprite equipSprite;
+    public Sprite useSprite;
+    public Sprite dropSprite;
+
     // Variable operations
     public int GetVar(int id) {
         if (id < 0 || id >= variables.Length) return 0;

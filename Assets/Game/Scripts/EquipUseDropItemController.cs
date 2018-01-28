@@ -13,9 +13,9 @@ public class EquipUseDropItemController : ParentItemController {
         Action<Image> use = new Action<Image>(UseAction);
         Action<Image> drop = new Action<Image>(DropAction);
 
-        contextMenuItems.Add(new ContextMenuItem("Equip", sampleButton, equip));
-        contextMenuItems.Add(new ContextMenuItem("Use", sampleButton, use));
-        contextMenuItems.Add(new ContextMenuItem("Drop", sampleButton, drop));
+        contextMenuItems.Add(new ContextMenuItem("Equipar", GameState.Instance.equipSprite, sampleButton, equip));
+        contextMenuItems.Add(new ContextMenuItem("Usar", GameState.Instance.useSprite, sampleButton, use));
+        contextMenuItems.Add(new ContextMenuItem("Tirar", GameState.Instance.dropSprite, sampleButton, drop));
     }
 
     void EquipAction(Image contextPanel)

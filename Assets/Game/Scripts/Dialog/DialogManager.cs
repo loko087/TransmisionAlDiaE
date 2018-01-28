@@ -9,6 +9,7 @@ public class DialogManager : MonoBehaviour {
     public Text nameText;
     public Text dialogText;
     public Button nextButton;
+    public Image speakerFace;
 
     private GameObject textPanel;
     private Queue<string> sentences;
@@ -29,6 +30,11 @@ public class DialogManager : MonoBehaviour {
         nextButton.gameObject.SetActive(true);
         
         nameText.text = dialog.name;
+        if (dialog.speakerFace != null) {
+            speakerFace.sprite = dialog.speakerFace;
+            speakerFace.gameObject.SetActive(true);
+        } else speakerFace.gameObject.SetActive(false);
+
 
         sentences.Clear();
 
@@ -59,6 +65,7 @@ public class DialogManager : MonoBehaviour {
         nameText.text = "";
         dialogText.text = "";
         nextButton.gameObject.SetActive(false);
+        speakerFace.gameObject.SetActive(false);
         isDialogOpen = false;
     }
 }

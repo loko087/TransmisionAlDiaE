@@ -8,14 +8,15 @@ using UnityEngine.UI;
 public class ContextMenuItem
 {
     // this class - just a box to some data
-
-    public string text;             // text to display on button
+    public string name;
+    public Sprite sprite;             // text to display on button
     public Button button;           // sample button prefab
     public Action<Image> action;    // delegate to method that needs to be executed when button is clicked
 
-    public ContextMenuItem(string text, Button button, Action<Image> action)
+    public ContextMenuItem(string name, Sprite sprite, Button button, Action<Image> action)
     {
-        this.text = text;
+        this.name = name;
+        this.sprite = sprite;
         this.button = button;
         this.action = action;
     }
@@ -58,8 +59,10 @@ public class ContextMenuGenerator : MonoBehaviour {
         {
             ContextMenuItem tempReference = item;
             Button button = Instantiate(item.button) as Button;
-            Text buttonText = button.GetComponentInChildren(typeof(Text)) as Text;
-            buttonText.text = item.text;
+            Text buttonText = button.GetComponentInChildren<Text>();
+            Image buttonImage = button.GetComponentInChildren<Image>();
+            buttonText.text = item.name;
+            buttonImage.sprite = item.sprite;
             button.onClick.AddListener(delegate { tempReference.action(panel); });
             button.transform.SetParent(panel.transform);
         }
