@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour {
 
     public Text nameText;
     public Text dialogText;
+    public Button nextButton;
 
     private GameObject textPanel;
     private Queue<string> sentences;
@@ -22,6 +23,8 @@ public class DialogManager : MonoBehaviour {
     {
         Image imagePanel = textPanel.GetComponent<Image>();
         imagePanel.enabled = true;
+
+        nextButton.gameObject.SetActive(true);
         
         nameText.text = dialog.name;
 
@@ -51,5 +54,8 @@ public class DialogManager : MonoBehaviour {
     {
         Image imagePanel = textPanel.GetComponent<Image>();
         imagePanel.enabled = false;
+        nameText.text = "";
+        dialogText.text = "";
+        nextButton.gameObject.SetActive(false);
     }
 }

@@ -50,17 +50,11 @@ public class ParentItemController : MonoBehaviour {
             if (mouseHit.collider.gameObject.CompareTag("Clickable"))
             {
                if (Input.GetMouseButtonDown(1))
-                {
+               {
                     PopupMenu();
-                }
+               }
                // Debug.Log("found");
             }
         }
 	}
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.up*1000);
-    }
 }
