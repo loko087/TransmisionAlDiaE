@@ -22,23 +22,25 @@ public class Inventory : MonoBehaviour {
 
         if(player == null)
         {
-            GameObject.FindGameObjectWithTag("Player");
+           player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character2D>();
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            CloseInventory();
-        }
-
-        if(carryingGameObject != null && Input.GetMouseButtonDown(0))
-        {
-            RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (ray.collider != null)
+        if(player != null) { 
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Colliding with " + ray.collider.name);
-                if(ray.collider.gameObject.name == carryingGameObject.targetObject)
+                CloseInventory();
+            }
+
+            if(carryingGameObject != null && Input.GetMouseButtonDown(0))
+            {
+                RaycastHit2D ray = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+                if (ray.collider != null)
                 {
-                    Debug.Log("Drop it like it's hot");
+                    Debug.Log("Colliding with " + ray.collider.name);
+                    if(ray.collider.gameObject.name == carryingGameObject.targetObject)
+                    {
+                        Debug.Log("Drop it like it's hot");
+                    }
                 }
             }
         }
