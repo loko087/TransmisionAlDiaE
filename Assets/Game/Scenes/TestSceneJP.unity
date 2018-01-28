@@ -300,10 +300,6 @@ Prefab:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114367531530897670, guid: e8d6e6498f6ed93419445590e80d8113,
-        type: 2}
-      propertyPath: mouseobject
-      value: 
-      objectReference: {fileID: 1036391349}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8d6e6498f6ed93419445590e80d8113, type: 2}
   m_IsPrefabParent: 0
