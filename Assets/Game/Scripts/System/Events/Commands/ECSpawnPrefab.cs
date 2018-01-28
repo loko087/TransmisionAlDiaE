@@ -7,8 +7,10 @@ public class ECSpawnPrefab : EventCommand {
     [SerializeField] GameObject spawn;
     [Tooltip("Position where the object will be spawned.")]
     [SerializeField] Vector3 position;
-    [Tooltip("Is the position relative to this object or not?")]
+    [Tooltip("Is the position relative to an object or not?")]
     [SerializeField] bool relative;
+    [Tooltip("Put here the instance to which the spawning will be relative to.")]
+    [SerializeField] Transform referenceObject;
 
     public override void Execute() {
         if(spawn != null) Instantiate(spawn, SpawnPosition(), Quaternion.identity);
@@ -20,6 +22,7 @@ public class ECSpawnPrefab : EventCommand {
     }
 
     private Vector3 SpawnPosition() {
-        return relative ? (transform.position + position) : position;
+        if (referenceObject == null) referenceObject = transform;
+        return relative ? (referenceObject.position + position) : position;
     }
 }

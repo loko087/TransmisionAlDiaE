@@ -64,7 +64,7 @@ public class DialogManager : MonoBehaviour {
         dialogText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
-            dialogText.text += letter;
+            if(isDialogOpen) dialogText.text += letter;
             yield return null;
         }
     }

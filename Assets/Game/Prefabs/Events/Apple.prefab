@@ -54,6 +54,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4607925651701000}
+  - component: {fileID: 114943986458221780}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -111,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626611588002452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.6, y: -3.8, z: 0}
+  m_LocalPosition: {x: 35.72, y: -1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4794548676890272}
@@ -184,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa736abcc5ff784482e115e055939ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  condition: {fileID: 0}
   commands:
   - {fileID: 114250959372221808}
   - {fileID: 114910525652749548}
@@ -215,6 +217,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   despawn: {fileID: 1626611588002452}
+--- !u!114 &114943986458221780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626611588002452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9772bea29eccd064098f3cebb0e4c232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueKind: 1
+  valueId: 1
+  varOper: 0
+  switchOper: 0
+  valueVar: 0
+  valueSwitch: 1
 --- !u!212 &212867503141750162
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -248,7 +267,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300018, guid: 1cba2ff7b581f9a4fb90f16c58bb5b5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class GameVariable {
@@ -28,12 +29,34 @@ public class GameState : MonoBehaviour {
             return;
         }
         m_Instance = this;
+        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        currentScene = scene.name;
+        Vector3 position = PlayerSpawner.GetRespawnById(warpId);
+        GameObject character = Instantiate(characterPrefab, position, Quaternion.identity);
+        Instantiate(characterSpawnEffect, position, Quaternion.identity);
+
+        Cinemachine.CinemachineVirtualCamera vcam = GameObject.FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
+        if (vcam != null) vcam.Follow = character.transform;
     }
 
     public bool eventWait;
     public bool isMessageOpen;
+
+    public string currentScene;
+    public int warpId;
+
+    [SerializeField] private GameObject characterPrefab;
+    [SerializeField] private GameObject characterSpawnEffect;
     [SerializeField] private GameVariable[] variables;
     [SerializeField] private GameSwitch[] switches;
+
+    public GameObject CharacterPrefab {
+        get { return characterPrefab; }
+    }
 
     public Sprite madreateSprite;
     public Sprite verSprite;
