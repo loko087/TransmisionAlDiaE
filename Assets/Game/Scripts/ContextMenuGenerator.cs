@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [Serializable]
@@ -54,6 +55,11 @@ public class ContextMenuGenerator : MonoBehaviour {
         panel.transform.SetParent(canvas.transform);
         panel.transform.SetAsLastSibling();
         panel.rectTransform.anchoredPosition = position;
+        EventTrigger panelTrigger = panel.GetComponent<EventTrigger>();
+        EventTrigger.Entry newEntry = new EventTrigger.Entry();
+        newEntry.eventID = EventTriggerType.PointerExit;
+        newEntry.callback.AddListener((data) => { DestroyContextMenu(); });
+        panelTrigger.triggers.Add(newEntry);
 
         foreach (var item in items)
         {
@@ -66,6 +72,7 @@ public class ContextMenuGenerator : MonoBehaviour {
             button.onClick.AddListener(delegate { tempReference.action(panel); });
             button.transform.SetParent(panel.transform);
         }
+        GameState.Instance.popupOpen = true;
     }
 
     public void DestroyContextMenu()
@@ -75,5 +82,6 @@ public class ContextMenuGenerator : MonoBehaviour {
         {
             DestroyObject(panel);
         }
+        GameState.Instance.popupOpen = false;
     }
 }

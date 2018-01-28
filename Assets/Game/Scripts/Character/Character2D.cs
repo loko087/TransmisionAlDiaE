@@ -26,12 +26,11 @@ public class Character2D : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (!InventoryOpen) {
-            if (Input.GetMouseButtonDown(0) && !GameState.Instance.eventWait)
+            if (Input.GetMouseButtonDown(0) && !GameState.Instance.eventWait && !GameState.Instance.popupOpen)
             {
                 //Debug.Log(Input.mousePosition + " World Position" + Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-
+                
             }
 
             if (Vector2.Distance(transform.position, targetPosition) > 0.3f)

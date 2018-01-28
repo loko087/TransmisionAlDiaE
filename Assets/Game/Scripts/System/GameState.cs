@@ -45,6 +45,7 @@ public class GameState : MonoBehaviour {
 
     public bool eventWait;
     public bool isMessageOpen;
+    public bool popupOpen;
 
     public string currentScene;
     public int warpId;

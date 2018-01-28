@@ -24,6 +24,7 @@ public class MadrearVerController : ParentItemController {
         PlayerInteract playerInteract = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteract>();
         playerInteract.SubscribeEvent(madrearEvent);
         Destroy(contextPanel.gameObject);
+        GameState.Instance.popupOpen = false;
     }
 
     void SeeAction(Image contextPanel)
@@ -31,5 +32,6 @@ public class MadrearVerController : ParentItemController {
         PlayerInteract playerInteract = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteract>();
         playerInteract.SubscribeEvent(verEvent);
         Destroy(contextPanel.gameObject);
+        GameState.Instance.popupOpen = false;
     }
 }

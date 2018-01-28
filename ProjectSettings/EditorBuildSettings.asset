@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Game/Scenes/TestSceneJP.unity
+    guid: 204f728efae2bf64da9a0a725f313f9e
+  - enabled: 1
+    path: Assets/Game/Scenes/CaminoExterior.unity
+    guid: 042965b7940149f49bd767ce47f46323
+  - enabled: 1
+    path: Assets/Game/Scenes/TestSceneJP_Dia3.unity
+    guid: 9e9cd94c02e85f74db6763530d9ba52a
