@@ -290,15 +290,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4081241395798870, guid: e8d6e6498f6ed93419445590e80d8113, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224148248348169944, guid: e8d6e6498f6ed93419445590e80d8113,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 114367531530897670, guid: e8d6e6498f6ed93419445590e80d8113,
         type: 2}
       propertyPath: mouseobject
@@ -1262,8 +1253,6 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1931180187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8, y: -4.7, z: -10.884622}
-=======
   m_LocalPosition: {x: 7.086282, y: -4.7087727, z: -10.884622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
