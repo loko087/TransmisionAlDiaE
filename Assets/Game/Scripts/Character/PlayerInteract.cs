@@ -11,6 +11,7 @@ public class PlayerInteract : MonoBehaviour {
 
     public bool SubscribeEvent(GameEvent newEvent) {
         if(!activeEvents.Contains(newEvent)) {
+            newEvent.InitializeEvent();
             activeEvents.Add(newEvent);
             return true;
         }
@@ -18,10 +19,13 @@ public class PlayerInteract : MonoBehaviour {
     }
 
     private void Update() {
-        if (GameState.instance.eventWait) return;
+        if (GameState.Instance.eventWait) return;
         if (activeEvents.Count > 0) {
             GameEvent activeEvent = activeEvents[0];
-            if (activeEvent.AdvanceEvent()) return;
+            // Support events dissapearing due to unexpected events (or just despawning).
+            if(activeEvent != null) {
+                if (activeEvent.AdvanceEvent()) return;
+            }
             activeEvents.Remove(activeEvent);
             // Skip input until it encounters no active events.
             return;

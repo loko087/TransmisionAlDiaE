@@ -8,29 +8,32 @@ public class ECSetVariable : EventCommand {
         EQUAL, SUM, REST, MULTIPLY, DIVISION, MODULUS
     }
 
+    [Tooltip("Variable ID to be changed (refer to the GameState instance).")]
     [SerializeField] private int varId;
+    [Tooltip("Operation to be applied, either EQUAL, SUM (+), REST (-), MULTIPLY (*), DIVISION (/) and MODULUS (%).")]
     [SerializeField] private OperKind operation;
+    [Tooltip("Value to be used when evaluating the change.")]
     [SerializeField] private int value;
 
     public override void Execute() {
         switch(operation) {
             case OperKind.EQUAL:
-                GameState.instance.SetVar(varId, value);
+                GameState.Instance.SetVar(varId, value);
                 break;
             case OperKind.SUM:
-                GameState.instance.ChangeVar(varId, value);
+                GameState.Instance.ChangeVar(varId, value);
                 break;
             case OperKind.REST:
-                GameState.instance.ChangeVar(varId, -value);
+                GameState.Instance.ChangeVar(varId, -value);
                 break;
             case OperKind.MULTIPLY:
-                GameState.instance.MultVar(varId, value);
+                GameState.Instance.MultVar(varId, value);
                 break;
             case OperKind.DIVISION:
-                GameState.instance.DivVar(varId, value);
+                GameState.Instance.DivVar(varId, value);
                 break;
             case OperKind.MODULUS:
-                GameState.instance.ModVar(varId, value);
+                GameState.Instance.ModVar(varId, value);
                 break;
         }
     }

@@ -8,17 +8,20 @@ public class ECSetSwitch : EventCommand {
         EQUAL, TOGGLE
     }
 
-    [SerializeField] private int varId;
+    [Tooltip("Switch ID to change (refer to the GameState instance).")]
+    [SerializeField] private int switchId;
+    [Tooltip("Operation kind to be applied. EQUAL sets the value to the one provided. TOGGLE changes the actual value to its opposite (true->false, false->true).")]
     [SerializeField] private OperKind operation;
+    [Tooltip("Value to be used at the EQUAL operation.")]
     [SerializeField] private bool value;
 
     public override void Execute() {
         switch(operation) {
             case OperKind.EQUAL:
-                GameState.instance.SetSwitch(varId, value);
+                GameState.Instance.SetSwitch(switchId, value);
                 break;
             case OperKind.TOGGLE:
-                GameState.instance.ToggleSwitch(varId);
+                GameState.Instance.ToggleSwitch(switchId);
                 break;
         }
     }

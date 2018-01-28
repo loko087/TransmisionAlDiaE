@@ -12,6 +12,8 @@ public class DialogManager : MonoBehaviour {
 
     private GameObject textPanel;
     private Queue<string> sentences;
+    private bool isDialogOpen;
+    public bool IsDialogOpen { get { return isDialogOpen; } }
 
 	// Use this for initialization
 	void Start () {
@@ -34,7 +36,7 @@ public class DialogManager : MonoBehaviour {
         {
             sentences.Enqueue(sentence);
         }
-
+        isDialogOpen = true;
         DisplayNextSentence();
     }
 
@@ -57,5 +59,6 @@ public class DialogManager : MonoBehaviour {
         nameText.text = "";
         dialogText.text = "";
         nextButton.gameObject.SetActive(false);
+        isDialogOpen = false;
     }
 }

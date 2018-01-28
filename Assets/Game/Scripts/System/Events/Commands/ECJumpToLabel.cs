@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ECJumpToLabel : EventCommand {
+    [Tooltip("Identifier to search and go to within the event command order.")]
     [SerializeField] protected string label;
     public bool returnValue = true;
 

@@ -113,6 +113,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &81441781 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1626611588002452, guid: e1e5182fe8a4943418be199321e4a894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1639355366}
+--- !u!114 &81441782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81441781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9772bea29eccd064098f3cebb0e4c232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueKind: 1
+  valueId: 1
+  varOper: 0
+  switchOper: 0
+  valueVar: 0
+  valueSwitch: 1
 --- !u!1 &188981630
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +407,7 @@ MonoBehaviour:
   eventWait: 0
   isMessageOpen: 0
   variables:
-  - name: manzana
+  - name: 
     value: 0
   - name: 
     value: 0
@@ -426,9 +448,9 @@ MonoBehaviour:
   - name: 
     value: 0
   switches:
-  - name: 
+  - name: manzana
     value: 0
-  - name: 
+  - name: muestraManzana
     value: 0
   - name: 
     value: 0
@@ -594,7 +616,7 @@ Transform:
   m_GameObject: {fileID: 940480846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.8, y: -4.7, z: -0.8846212}
-  m_LocalScale: {x: 3.3532534, y: 3.3532534, z: 3.3532534}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1207626832}
   m_Father: {fileID: 0}
@@ -682,6 +704,11 @@ GameObject:
   m_Component:
   - component: {fileID: 973182783}
   - component: {fileID: 973182786}
+  - component: {fileID: 973182792}
+  - component: {fileID: 973182791}
+  - component: {fileID: 973182790}
+  - component: {fileID: 973182789}
+  - component: {fileID: 973182788}
   - component: {fileID: 973182785}
   - component: {fileID: 973182784}
   - component: {fileID: 973182787}
@@ -735,6 +762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     name: Otto
+    speakerFace: {fileID: 0}
     sentences:
     - '*llama al Uber*'
     - "\xA1Vamos a tratar la corrupci\xF3n con mano dura!"
@@ -749,7 +777,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa736abcc5ff784482e115e055939ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  condition: {fileID: 0}
   commands:
+  - {fileID: 973182792}
+  - {fileID: 973182791}
+  - {fileID: 973182790}
+  - {fileID: 973182789}
+  - {fileID: 973182788}
   - {fileID: 973182785}
   activated: 0
 --- !u!61 &973182787
@@ -777,6 +811,78 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5972031, y: 3.5309992}
   m_EdgeRadius: 0
+--- !u!114 &973182788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973182782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4151e65e067e19242adac8a7fe6c393b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: fin
+--- !u!114 &973182789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973182782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66380388e1102e4e9432e24e69385ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 81441781}
+  value: 1
+  switchId: -1
+--- !u!114 &973182790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973182782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978fd7a41f5d6c14182e69f91d32c13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchId: 1
+  operation: 0
+  value: 1
+--- !u!114 &973182791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973182782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3c314534eaa6b4ca4e918bc27f104e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Otto
+    speakerFace: {fileID: 0}
+    sentences:
+    - "Tom\xE1 ni\xF1o una manzana para que se\xE1s de grande como Otto *risa sard\xF3nica*."
+--- !u!114 &973182792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973182782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3d052595bfed147a4f05f4480f8875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: fin
+  returnValue: 1
+  switchId: 1
+  check: 0
+  value: 1
 --- !u!1 &985943095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,7 +1276,7 @@ Transform:
   m_GameObject: {fileID: 1416118194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 48.845, y: -8.016, z: 0}
-  m_LocalScale: {x: 4.57164, y: 4.57164, z: 4.57164}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 973182783}
   - {fileID: 2139383752}
@@ -1308,6 +1414,48 @@ RectTransform:
   m_AnchoredPosition: {x: -88.43, y: -22.28}
   m_SizeDelta: {x: 401.16, y: 44.57}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1639355366
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4607925651701000, guid: e1e5182fe8a4943418be199321e4a894, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 44.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607925651701000, guid: e1e5182fe8a4943418be199321e4a894, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607925651701000, guid: e1e5182fe8a4943418be199321e4a894, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607925651701000, guid: e1e5182fe8a4943418be199321e4a894, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607925651701000, guid: e1e5182fe8a4943418be199321e4a894, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607925651701000, guid: e1e5182fe8a4943418be199321e4a894, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607925651701000, guid: e1e5182fe8a4943418be199321e4a894, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607925651701000, guid: e1e5182fe8a4943418be199321e4a894, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e1e5182fe8a4943418be199321e4a894, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1690984583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,7 +1903,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1931180187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.0054846, y: -4.7086077, z: -10.884622}
+  m_LocalPosition: {x: 2.8, y: -4.7, z: -10.884622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1696746044}

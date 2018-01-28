@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameEvent : MonoBehaviour {
+    [SerializeField] private EventCondition condition;
     [SerializeField] private EventCommand[] commands;
     [SerializeField] private bool activated;
     private int index;
@@ -20,7 +21,7 @@ public class GameEvent : MonoBehaviour {
         }
     }
     
-    private void InitializeEvent() {
+    public void InitializeEvent() {
         index = 0;
     }
 

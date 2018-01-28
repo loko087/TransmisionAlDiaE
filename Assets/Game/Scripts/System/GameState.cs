@@ -14,14 +14,20 @@ public class GameSwitch {
 }
 
 public class GameState : MonoBehaviour {
-    public static GameState instance;
-
+    private static GameState m_Instance;
+    public static GameState Instance {
+        get {
+            if (m_Instance == null) m_Instance = FindObjectOfType<GameState>();
+            return m_Instance;
+        }
+    }
+    
     private void Awake() {
-        if(instance != null) {
+        if(Instance != null && Instance != this) {
             Destroy(gameObject);
             return;
         }
-        instance = this;
+        m_Instance = this;
     }
 
     public bool eventWait;
@@ -41,7 +47,7 @@ public class GameState : MonoBehaviour {
         return 0;
     }
     public void SetVar(int id, int value) {
-        if (id > 0 && id < variables.Length) {
+        if (id >= 0 && id < variables.Length) {
             variables[id].value = value;
         }
     }
@@ -53,7 +59,7 @@ public class GameState : MonoBehaviour {
         }
     }
     public void ChangeVar(int id, int value) {
-        if (id > 0 && id < variables.Length) {
+        if (id >= 0 && id < variables.Length) {
             variables[id].value += value;
         }
     }
@@ -65,17 +71,17 @@ public class GameState : MonoBehaviour {
         }
     }
     public void MultVar(int id, int value) {
-        if (id > 0 && id < variables.Length) {
+        if (id >= 0 && id < variables.Length) {
             variables[id].value *= value;
         }
     }
     public void DivVar(int id, int value) {
-        if (id > 0 && id < variables.Length) {
+        if (id >= 0 && id < variables.Length) {
             variables[id].value /= value;
         }
     }
     public void ModVar(int id, int value) {
-        if (id > 0 && id < variables.Length) {
+        if (id >= 0 && id < variables.Length) {
             variables[id].value %= value;
         }
     }
@@ -92,7 +98,7 @@ public class GameState : MonoBehaviour {
         return false;
     }
     public void SetSwitch(int id, bool value) {
-        if (id > 0 && id < switches.Length) {
+        if (id >= 0 && id < switches.Length) {
             switches[id].value = value;
         }
     }
@@ -104,7 +110,7 @@ public class GameState : MonoBehaviour {
         }
     }
     public void ToggleSwitch(int id) {
-        if (id > 0 && id < switches.Length) {
+        if (id >= 0 && id < switches.Length) {
             switches[id].value = !switches[id].value;
         }
     }

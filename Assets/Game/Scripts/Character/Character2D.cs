@@ -19,7 +19,7 @@ public class Character2D : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !GameState.Instance.eventWait)
         {
             //Debug.Log(Input.mousePosition + " World Position" + Camera.main.ScreenToWorldPoint(Input.mousePosition));
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
