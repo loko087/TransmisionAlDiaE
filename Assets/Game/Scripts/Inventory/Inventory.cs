@@ -10,12 +10,21 @@ public class Inventory : MonoBehaviour {
 
     public InventoryItem carryingGameObject;
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         carryingGameObject = null;
         player = null;
-	}
+        GameState.activateInventoryObjectEvent += ActivateInventoryItem;
+
+        foreach (InventoryItem i in items)
+        { 
+            if (i != null)
+            {
+                i.gameObject.SetActive(false);
+            }
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,6 +37,10 @@ public class Inventory : MonoBehaviour {
         if(player != null) { 
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if(carryingGameObject != null)
+                {
+                    carryingGameObject.mouseobject.SetActive(false);
+                }
                 CloseInventory();
             }
 
@@ -53,6 +66,13 @@ public class Inventory : MonoBehaviour {
         gameObject.SetActive(false);
 
         player.targetPosition = player.transform.position;
+
+    }
+
+
+    public void ActivateInventoryItem(int id)
+    {
+        items[id].gameObject.SetActive(true);
 
     }
 }
