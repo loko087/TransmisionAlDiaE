@@ -11,7 +11,7 @@ public class DialogManager : MonoBehaviour {
     public Button nextButton;
     public Image speakerFace;
 
-    private GameObject textPanel;
+    public GameObject textPanel;
     private Queue<string> sentences;
     private bool isDialogOpen;
     public bool IsDialogOpen { get { return isDialogOpen; } }
@@ -19,7 +19,6 @@ public class DialogManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         sentences = new Queue<string>();
-        textPanel = GameObject.Find("/Main Camera/Canvas/DialogPanel");
 	}
 
     public void StartDialog(Dialog dialog)
